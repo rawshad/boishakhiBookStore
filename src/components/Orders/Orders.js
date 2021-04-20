@@ -4,7 +4,7 @@ const Orders = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const [myOrder, setMyOrder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/registration/${user.email}`)
+        fetch(`https://thawing-brushlands-08530.herokuapp.com/registration/${user.email}`)
         .then(res => res.json())
         .then(data => setMyOrder(data))
     }, [])

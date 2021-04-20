@@ -4,7 +4,7 @@ import Book from '../Book/Book';
 
 const Store = () => {
     // const handleInsert = () => {
-    //     fetch('http://localhost:5000/addBook', {
+    //     fetch('https://thawing-brushlands-08530.herokuapp.com/addBook', {
     //         method: 'POST',
     //         headers: {'Content-Type' : 'application/json'},
     //         body: JSON.stringify(books)
@@ -14,7 +14,7 @@ const Store = () => {
     // }
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://thawing-brushlands-08530.herokuapp.com/books')
         .then(res => res.json())
         .then(data => setBooks(data))
     }, []);

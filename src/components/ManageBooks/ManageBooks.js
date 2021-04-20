@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const ManageBooks = () => {
     const [registration, setRegistration] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/registrations`)
+        fetch(`https://thawing-brushlands-08530.herokuapp.com/registrations`)
         .then(res => res.json())
         .then(data => setRegistration(data))
     }, [])

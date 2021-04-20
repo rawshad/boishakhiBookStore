@@ -5,7 +5,7 @@ const RegisteredBook = (props) => {
     const history = useHistory();
     const { _id, userName, userEmail, productName, productPrice, date, author } = props.reg;
     const handleDelete = () => {
-        fetch(`http://localhost:5000/deleteRegistration/${_id}`, {
+        fetch(`https://thawing-brushlands-08530.herokuapp.com/deleteRegistration/${_id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

@@ -24,7 +24,7 @@ const CheckOut = () => {
         e.preventDefault();
         // console.log(registrationData);
         if (registrationData.date) {
-            fetch('http://localhost:5000/addRegistration', {
+            fetch('https://thawing-brushlands-08530.herokuapp.com/addRegistration', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(registrationData)
@@ -39,7 +39,7 @@ const CheckOut = () => {
         }
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/book/${id}`)
+        fetch(`https://thawing-brushlands-08530.herokuapp.com/book/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

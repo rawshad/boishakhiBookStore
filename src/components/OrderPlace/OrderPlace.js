@@ -6,7 +6,7 @@ const OrderPlace = (props) => {
     const order = props.order;
     const {_id, userName, userEmail, date, productName, productPrice, img, author} = order;
     const handleDelete = () => {
-        fetch(`http://localhost:5000/deleteRegistration/${_id}`, {
+        fetch(`https://thawing-brushlands-08530.herokuapp.com/deleteRegistration/${_id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

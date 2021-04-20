@@ -7,7 +7,7 @@ const AddBooks = () => {
     const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:5000/addBook', {
+        fetch('https://thawing-brushlands-08530.herokuapp.com/addBook', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(addBook)
